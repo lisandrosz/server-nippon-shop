@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flavors",
+  "info": {
+    "singularName": "flavor",
+    "pluralName": "flavors",
+    "displayName": "Flavor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "item": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::item.item",
+      "inversedBy": "flavors"
+    }
+  }
+}
